@@ -1,0 +1,178 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Box sizing rules */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements  */
+ul[role="list"]
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+.main {
+    background-color: hsla(179, 62%, 43%, .3);
+    /* height: inherit; */
+    justify-items: center;
+    align-content: center;
+}
+
+.main__card {
+    width: 80%;
+    max-width: 300px;
+    border-radius: .5em;
+    margin: 5em 0;
+    overflow: hidden;
+}
+
+.card__first-section,
+.card__second-section,
+.card__third-section {
+    padding: 2em;
+}
+
+.card__first-section {
+    background-color: #fff;
+}
+
+.first-section__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+    margin-bottom: .5em;
+}
+
+.first-section__subtitle {
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 1.2em;
+}
+
+.first-section__description {
+    font-size: .9rem;
+    color: hsl(218, 22%, 67%);
+}
+
+.card__second-section {
+    background-color: hsla(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+}
+
+.second-section__title {
+    font-weight: 700;
+    margin-bottom: .8em;
+}
+
+.second-section__cost {
+    color: hsla(204, 43%, 93%, .5);
+}
+
+span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(204, 43%, 93%);
+    margin-right: .125em;
+}
+
+.second-section__description {
+    color: hsla(204, 43%, 93%, .8);
+    margin-bottom: 2em;
+}
+
+.second-section__button {
+    background-color: hsl(71, 73%, 54%);
+    padding: .9em 0;
+    border-radius: .5em;
+    text-align: center;
+    font-weight: 700;
+}
+
+.card__third-section {
+    background-color: hsla(179, 62%, 43%, .8);
+    color: hsl(204, 43%, 93%);
+}
+
+.third-section__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: .5em;
+}
+
+.third-section__description {
+    color: hsla(204, 43%, 93%, .8);
+}
+
+@media (min-width: 800px) {
+    .main {
+        height: inherit;
+    }
+
+    .main__card {
+        max-width: 650px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .card__second-section,
+    .card__third-section {
+        width: 50%;
+    }
+}
